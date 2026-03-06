@@ -1,11 +1,13 @@
 const express = require('express');
+const cors = require('cors');
 const healthRoutes = require('./routes/healthRoutes');
 const todoRoutes = require('./routes/todoRoutes');
 
 const app = express();
 
 // Middleware
-app.use(express.json()); // Parse JSON request bodies
+app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(express.json());
 
 // Routes
 app.use('/health', healthRoutes);
