@@ -10,7 +10,7 @@ variables:
   dockerfilePath: "Dockerfile"
   tag: "$(Build.BuildId)"
   azureSubscription: "todo-arm"
-  acrServiceConnection: "todo-arm"
+  acrServiceConnection: "todoAcr"
   ${{ if eq(variables['Build.SourceBranchName'], 'main') }}:
     appName: "todoBackend"
     envLabel: "prod"
