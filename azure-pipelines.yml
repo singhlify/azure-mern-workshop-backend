@@ -24,7 +24,7 @@ stages:
     jobs:
       - job: Build
         pool:
-          vmImage: "ubuntu-latest"
+          vmImage: "Default"
         steps:
           - script: |
               echo "=== Azure Pipeline Variables ==="
@@ -59,7 +59,7 @@ stages:
     jobs:
       - job: Deploy
         pool:
-          vmImage: "ubuntu-latest"
+          vmImage: "Default"
         steps:
           - task: AzureWebAppContainer@1
             displayName: Deploy container to Web App
